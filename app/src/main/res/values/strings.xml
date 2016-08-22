@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">PassItOn!</string>
+
+
+    <!-- Login Strings -->
+    <string name="box_signin_title">Sign in</string>
+    <string name="box_register_title">Register</string>
+    <string name="no_account_text">Don\'t have an account?</string>
+    <string name="has_account_text">Have an account?</string>
+    <string name="create_one_text">Create One</string>
+    <string name="login_text">Login</string>
+    <string name="signup_text">Create</string>
+
+
+</resources>
