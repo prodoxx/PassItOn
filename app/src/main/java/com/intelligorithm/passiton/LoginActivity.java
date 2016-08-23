@@ -7,6 +7,7 @@ import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 import uk.co.chrisjenx.calligraphy.CalligraphyContextWrapper;
@@ -14,6 +15,9 @@ import uk.co.chrisjenx.calligraphy.CalligraphyContextWrapper;
 public class LoginActivity extends AppCompatActivity {
 
     private String TAG = "LoginActivity";
+    private RelativeLayout loginActivityLayout;
+    private RelativeLayout loadingLayout;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -28,6 +32,11 @@ public class LoginActivity extends AppCompatActivity {
         final EditText username = (EditText) findViewById(R.id.username);
         final Button loginSignUpButton = (Button) findViewById(R.id.login_signup_button);
         final TextView accountText = (TextView) findViewById(R.id.account_text);
+
+        loginActivityLayout = (RelativeLayout) findViewById(R.id.login_activity_layout);
+        loadingLayout = (RelativeLayout) findViewById(R.id.loadingLayout);
+
+
 
 
         toggleViewLoginSignup.setOnClickListener(new View.OnClickListener() {
@@ -60,6 +69,13 @@ public class LoginActivity extends AppCompatActivity {
         loginSignUpButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+
+
+                shouldShowLoading(true);
+
+                Log.v(TAG, "Big button clicked!");
+
+
                 if(boxTitle.getText().toString().equals(getResources().getString(R.string.box_signin_title))){
                     //login
 
@@ -76,6 +92,19 @@ public class LoginActivity extends AppCompatActivity {
 
 
     }
+
+    private void shouldShowLoading(boolean indicator){
+        if(indicator){
+            loginActivityLayout.setVisibility(View.GONE);
+            loadingLayout.setVisibility(View.VISIBLE);
+        } else {
+            loadingLayout.setVisibility(View.GONE);
+            loginActivityLayout.setVisibility(View.VISIBLE);
+
+        }
+    }
+
+
 
     @Override
     protected void attachBaseContext(Context newBase) {

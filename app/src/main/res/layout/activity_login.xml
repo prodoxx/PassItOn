@@ -21,119 +21,153 @@
         android:layout_height="wrap_content" />
 
 
-    <LinearLayout
+    <RelativeLayout
         android:layout_width="match_parent"
+        android:id="@+id/login_activity_layout"
         android:layout_below="@id/login_title"
-        android:layout_marginTop="24dp"
-        android:padding="12dp"
-        android:id="@+id/signin_layout"
-        android:orientation="vertical"
-        android:background="@drawable/rounded_login_layout"
-        android:layout_height="wrap_content">
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_below="@id/login_title"
+            android:layout_marginTop="24dp"
+            android:padding="12dp"
+            android:id="@+id/signin_layout"
+            android:orientation="vertical"
+            android:background="@drawable/rounded_login_layout"
+            android:layout_height="wrap_content">
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:text="@string/box_signin_title"
-            android:paddingBottom="12dp"
-            android:id="@+id/boxTitle"
-            android:textAppearance="@style/TextAppearance.AppCompat.Title"
-            android:layout_height="wrap_content" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:text="@string/box_signin_title"
+                android:paddingBottom="12dp"
+                android:id="@+id/boxTitle"
+                android:textAppearance="@style/TextAppearance.AppCompat.Title"
+                android:layout_height="wrap_content" />
 
-         <LinearLayout
-             android:layout_width="match_parent"
-             android:orientation="vertical"
-             android:layout_height="wrap_content">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:orientation="vertical"
+                android:layout_height="wrap_content">
 
-             <EditText
-                 android:layout_width="wrap_content"
-                 android:layout_height="46dp"
-                 android:inputType="text"
-                 android:ems="64"
-                 android:paddingLeft="16dp"
-                 android:paddingRight="16dp"
-                 android:paddingBottom="8dp"
-                 android:paddingTop="8dp"
-                 android:id="@+id/username"
-                 android:visibility="gone"
-                 android:hint="Username"
-                 android:layout_marginBottom="6dp"
-                 android:background="@drawable/rounded_inputbox"
-                 android:layout_weight="1" />
-
-
-             <EditText
-                 android:layout_width="wrap_content"
-                 android:layout_height="46dp"
-                 android:inputType="textEmailAddress"
-                 android:ems="64"
-                 android:paddingLeft="16dp"
-                 android:paddingRight="16dp"
-                 android:paddingBottom="8dp"
-                 android:paddingTop="8dp"
-                 android:id="@+id/email"
-
-                 android:hint="Email"
-                 android:layout_marginBottom="6dp"
-                 android:background="@drawable/rounded_inputbox"
-                 android:layout_weight="1" />
-
-             <EditText
-                 android:layout_width="wrap_content"
-                 android:layout_height="46dp"
-                 android:inputType="textEmailAddress"
-                 android:ems="64"
-                 android:hint="Password"
-                 android:paddingLeft="16dp"
-                 android:paddingRight="16dp"
-                 android:paddingBottom="8dp"
-                 android:paddingTop="8dp"
-                 android:id="@+id/password"
-
-                 android:background="@drawable/rounded_inputbox"
-                 android:layout_weight="1" />
+                <EditText
+                    android:layout_width="wrap_content"
+                    android:layout_height="46dp"
+                    android:inputType="text"
+                    android:ems="64"
+                    android:paddingLeft="16dp"
+                    android:paddingRight="16dp"
+                    android:paddingBottom="8dp"
+                    android:paddingTop="8dp"
+                    android:id="@+id/username"
+                    android:visibility="gone"
+                    android:hint="Username"
+                    android:layout_marginBottom="6dp"
+                    android:background="@drawable/rounded_inputbox"
+                    android:layout_weight="1" />
 
 
-             <RelativeLayout
-                 android:layout_width="match_parent"
+                <EditText
+                    android:layout_width="wrap_content"
+                    android:layout_height="46dp"
+                    android:inputType="textEmailAddress"
+                    android:ems="64"
+                    android:paddingLeft="16dp"
+                    android:paddingRight="16dp"
+                    android:paddingBottom="8dp"
+                    android:paddingTop="8dp"
+                    android:id="@+id/email"
 
-                 android:layout_marginTop="12dp"
-                 android:layout_height="wrap_content">
-                 <Button
-                     android:layout_width="match_parent"
-                     android:id="@+id/login_signup_button"
-                     android:text="LogIn"
-                     android:background="@color/colorAccent"
-                     android:textColor="@android:color/white"
-                     android:padding="12dp"
-                     android:textSize="23sp"
-                     android:textAppearance="@style/TextAppearance.AppCompat.Button"
-                     android:layout_height="wrap_content" />
-             </RelativeLayout>
+                    android:hint="Email"
+                    android:layout_marginBottom="6dp"
+                    android:background="@drawable/rounded_inputbox"
+                    android:layout_weight="1" />
 
-         </LinearLayout>
+                <EditText
+                    android:layout_width="wrap_content"
+                    android:layout_height="46dp"
+                    android:inputType="textEmailAddress"
+                    android:ems="64"
+                    android:hint="Password"
+                    android:paddingLeft="16dp"
+                    android:paddingRight="16dp"
+                    android:paddingBottom="8dp"
+                    android:paddingTop="8dp"
+                    android:id="@+id/password"
 
-    </LinearLayout>
-    <LinearLayout
+                    android:background="@drawable/rounded_inputbox"
+                    android:layout_weight="1" />
+
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+
+                    android:layout_marginTop="12dp"
+                    android:layout_height="wrap_content">
+                    <Button
+                        android:layout_width="match_parent"
+                        android:id="@+id/login_signup_button"
+                        android:text="LogIn"
+                        android:background="@color/colorAccent"
+                        android:textColor="@android:color/white"
+                        android:padding="12dp"
+                        android:textSize="23sp"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Button"
+                        android:layout_height="wrap_content" />
+                </RelativeLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_marginTop="56dp"
+            android:gravity="center"
+            android:layout_below="@id/signin_layout"
+            android:layout_height="wrap_content">
+            <TextView
+                android:layout_width="wrap_content"
+                android:id="@+id/account_text"
+                android:text="@string/no_account_text"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:text="@string/create_one_text"
+                android:background="@drawable/hyperlink_underline"
+                android:layout_marginLeft="4dp"
+                android:id="@+id/toggleViewLoginSignup"
+                android:textColor="@color/colorAccent"
+                android:layout_height="wrap_content" />
+
+        </LinearLayout>
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:id="@+id/loadingLayout"
         android:layout_width="match_parent"
-        android:layout_marginTop="56dp"
-        android:gravity="center"
-        android:layout_below="@id/signin_layout"
-        android:layout_height="wrap_content">
-        <TextView
-            android:layout_width="wrap_content"
-            android:id="@+id/account_text"
-            android:text="@string/no_account_text"
-            android:layout_height="wrap_content" />
+        android:visibility="gone"
+        android:layout_height="match_parent"
+        android:gravity="center">
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:text="@string/create_one_text"
-            android:background="@drawable/hyperlink_underline"
-            android:layout_marginLeft="4dp"
-            android:id="@+id/toggleViewLoginSignup"
-            android:textColor="@color/colorAccent"
-            android:layout_height="wrap_content" />
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true">
 
-    </LinearLayout>
+            <ProgressBar
+                android:layout_width="wrap_content"
+                android:layout_gravity="center"
+
+                android:layout_height="wrap_content"
+                android:indeterminate="true" />
+
+
+        </LinearLayout>
+    </RelativeLayout>
 
 </RelativeLayout>
